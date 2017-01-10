@@ -6,7 +6,16 @@ export default class ItemController {
       if (err) {
         return next(err);
       }
-      res.send({items});
+      res.send(items);
     });
+  }
+
+  getItem(req, res, next) {
+    items.findOne({name: "xiaowang"}, (err, item) => {
+      if (err) {
+        return next(err);
+      }
+      res.send(item);
+    })
   }
 }
