@@ -8,5 +8,5 @@ var itemsSchema = new Schema({
   password:String
 
 });
-module.exports = mongoose.model('Supermarket',itemsSchema);
+module.exports = mongoose.model('items',itemsSchema);
 
